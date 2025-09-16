@@ -1,0 +1,31 @@
+env: dev
+application:
+  name: NotificationService
+http_server:
+  address: :localhost:8080
+  timeout: 6s
+  idle_timeout: 60s
+postgres:
+  user: postgres
+  password: postgres
+  host: 127.0.0.1
+  port: 5432
+  database: notification
+  idle_timeout: 300
+  connect_timeout: 10
+metrics_server:
+  address: :9090
+  enabled: true
+  path: /metrics
+log:
+  save_path: ./tmp
+  file_name: app
+  max_size: 100
+  max_age: 30
+  local_time: true
+  compress: true
+  level: debug
+  enable_console: true
+  enable_color: true
+  enable_caller: true
+  enable_stacktrace: true
